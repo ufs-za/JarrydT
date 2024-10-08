@@ -27,3 +27,5 @@ The app provides the final prediction of the customers intent to purchase as wel
 ---
 
 For any further information or contributions, feel free to explore the repository or reach out directly.
+
+Application link: https://jarrydt-purchaseintention.streamlit.app/
