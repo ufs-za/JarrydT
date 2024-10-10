@@ -24,6 +24,14 @@ The app provides the final prediction of the customers intent to purchase as wel
 
 - **Model Integration:** Loading the **Random Forest** model from a pickle file proved to be difficult  due to compatibility issues with the `pickle` package. This was resolved by using **pandas** to load the pickle file, ensuring that the **Random Forest** model was able to be used. 
 
+## Process of Deployment 
+
+- **Application Code:** The core logic of the applications code is written in the `app.py` file. The code imports the **Random Forest** model, sets up the buttons and sliders for the user's interaction, and makes predictions based on the input provided. The code also calculates the confidence level of the prediction, displaying the overall accuracy. Additionally, a feedback button allows the user to submit feedback through a dedicated input box.
+
+- **Supporting Files:** Several supporting files were included in the Streamlit app. The `.streamlit` file contains configuration settings for customizing the app's appearance. Other files include an image of the app's icon, and the pre-trained **Random Forest** model, which is used for generating predictions. The `requirements.txt` file lists all the necessary Python packages needed for the app to run on streamlit.
+
+- **Linking Streamlit:** Once the files were uploaded it is a matter of linking streamlit to the Github repository. This was done by creating an account on Streamlit and linking it to the Github page. The repository is then selected and the app is created. 
+  
 ---
 
 For any further information or contributions, feel free to explore the repository or reach out directly.
