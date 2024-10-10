@@ -76,7 +76,7 @@ with st.expander("Customer Experience Ratings"):
         PSAverage = st.slider('How price sensitive are you?', 1, 5, help="1: Not price sensitive, 5: Very price sensitive")
         PEAverage = st.slider('How comfortable are you in the store\'s environment?', 1, 5, help="1: Bad physical environment, 5: Great physical environment")
         
-    #These three sliders are plotted on the left side. The sliders are created with a range from 1-5.
+    #These three sliders are plotted on the right side. The sliders are created with a range from 1-5.
     with right:
         PPQAverage = st.slider('How satisfied are you with the product quality?', 1, 5, help="1: Bad product quality, 5: Amazing product quality")
         CTAverage = st.slider('How much do you trust the store?', 1, 5, help="1: Very low trust, 5: Very high trust")
@@ -88,7 +88,7 @@ if 'show_feedback' not in st.session_state:
 if 'show_feedback_box' not in st.session_state:
     st.session_state['show_feedback_box'] = False
     
-#intention_map is created so that when the prediction of Purchase Intentions is made it is not just a value given.    
+#intention_map is created so that when the prediction of Purchase Intentions is made it is not just a value given but also words.    
 intention_map = {
     1: "Very Low (1)",
     2: "Low (2)",
@@ -125,6 +125,5 @@ if st.session_state['show_feedback_box']:
         # Immediately close the feedback dialog after submitting
         st.session_state['show_feedback_box'] = False
         st.session_state['show_feedback'] = False
-        st.success("Your feedback has been received.")
         # Rerun the app after submission to reset the button
         st.rerun()
